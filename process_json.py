@@ -4,8 +4,8 @@ import ntpath
 
 
 fpaths = included_files('.', ['*.json'])
-js = dict()
 
+js = dict()
 for fpath in fpaths:
     f = open(fpath, 'r')
     fname = ntpath.basename(fpath)[:-5]
