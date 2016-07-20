@@ -1,10 +1,18 @@
 from gsfileman import included_files
 import json
 import ntpath
+import os
 
+# Look for jsons here:
+path   = './test_cases/'
 
-fpaths = included_files('.', ['*.json'])
+# Find jsons
+fpaths = included_files(path, ['*.json'])
 
+# change to jsons directory
+os.chdir(path)
+
+# Load each one into a dict
 js = dict()
 for fpath in fpaths:
     f = open(fpath, 'r')
