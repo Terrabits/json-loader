@@ -17,7 +17,7 @@ js = dict()
 for fpath in fpaths:
     f = open(fpath, 'r')
     fname = ntpath.basename(fpath)[:-5]
-    js[fname] = json.loads(f.read())
+    js[fname] = json.loads(str(f.read()))
 
 print("{0} files loaded".format(len(js)))
 
