@@ -1,0 +1,2 @@
+Title,                      Author,                      ISBN
+{{ js["book1"]["title"] }}, {{ js["book1"]["author"] }}, {{ js["book1"]["isbn"] }}
